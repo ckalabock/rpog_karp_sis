@@ -1,0 +1,46 @@
+﻿<Window x:Class="BiblApp.Windows.BookEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Book" Height="430" Width="420"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="14">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="Title:"/>
+        <TextBox x:Name="TitleTextBox" Grid.Row="0" Grid.Column="1" Margin="0,0,0,10" MaxLength="200"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="Author:"/>
+        <ComboBox x:Name="AuthorComboBox" Grid.Row="1" Grid.Column="1" Margin="0,0,0,10" DisplayMemberPath="FullName"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="Genre:"/>
+        <ComboBox x:Name="GenreComboBox" Grid.Row="2" Grid.Column="1" Margin="0,0,0,10" DisplayMemberPath="Name"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="Publish year:"/>
+        <TextBox x:Name="PublishYearTextBox" Grid.Row="3" Grid.Column="1" Margin="0,0,0,10" MaxLength="4"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="ISBN:"/>
+        <TextBox x:Name="IsbnTextBox" Grid.Row="4" Grid.Column="1" Margin="0,0,0,10" MaxLength="20"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="In stock:"/>
+        <TextBox x:Name="QuantityTextBox" Grid.Row="5" Grid.Column="1" Margin="0,0,0,10" MaxLength="9"/>
+
+        <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Width="90" Margin="0,0,10,0" Content="Save" Click="SaveButton_Click"/>
+            <Button Width="90" Content="Cancel" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

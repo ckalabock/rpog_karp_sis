@@ -1,0 +1,38 @@
+﻿<Window x:Class="BiblApp.Windows.AuthorEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Author" Height="300" Width="400"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="14">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="First name:"/>
+        <TextBox x:Name="FirstNameTextBox" Grid.Row="0" Grid.Column="1" Margin="0,0,0,10" MaxLength="100"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="Last name:"/>
+        <TextBox x:Name="LastNameTextBox" Grid.Row="1" Grid.Column="1" Margin="0,0,0,10" MaxLength="100"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="Birth date:"/>
+        <DatePicker x:Name="BirthDatePicker" Grid.Row="2" Grid.Column="1" Margin="0,0,0,10"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="0,0,8,10" VerticalAlignment="Center" Text="Country:"/>
+        <TextBox x:Name="CountryTextBox" Grid.Row="3" Grid.Column="1" Margin="0,0,0,10" MaxLength="100"/>
+
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Width="90" Margin="0,0,10,0" Content="Save" Click="SaveButton_Click"/>
+            <Button Width="90" Content="Cancel" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
