@@ -93,10 +93,3 @@ dotnet tool run dotnet-ef database update --project .\BiblApp\BiblApp.csproj --s
 - `BiblApp/Windows` - окна CRUD
 - `BiblApp/MainWindow.xaml` - главное окно приложения
 
-## GitHub
-
-Удаленный репозиторий:
-
-```text
-https://github.com/ckalabock/rpog_karp_sis.git
-```
